@@ -4,18 +4,15 @@
 
 cmake_minimum_required(VERSION 2.8.0)
 project(xbox_gui)
-
+add_compile_options(-std=c++11)
 ##############################################################################
 # Catkin
 ##############################################################################
 
 # qt_build provides the qt cmake glue, roscpp the comms for a default talker
-find_package(catkin REQUIRED COMPONENTS qt_build roscpp)
+find_package(catkin REQUIRED COMPONENTS qt_build roscpp message_generation std_msgs)
 include_directories(${catkin_INCLUDE_DIRS})
-# Use this to define what the package will export (e.g. libs, headers).
-# Since the default here is to produce only a binary, we don't worry about
-# exporting anything. 
-catkin_package()
+
 
 ##############################################################################
 # Qt Environment
@@ -24,6 +21,13 @@ catkin_package()
 # this comes from qt_build's qt-ros.cmake which is automatically 
 # included via the dependency call in package.xml
 rosbuild_prepare_qt4(QtCore QtGui) # Add the appropriate components to the component list here
+
+generate_messages(DEPENDENCIES std_msgs)
+
+# Use this to define what the package will export (e.g. libs, headers).
+# Since the default here is to produce only a binary, we don't worry about
+# exporting anything.
+catkin_package(CATKIN_DEPENDS message_runtime std_msgs roscpp)
 
 ##############################################################################
 # Sections

@@ -2,5 +2,6 @@
     <qresource prefix="/">
         <file>images/icon.png</file>
         <file>images/Xbox.png</file>
+        <file>images/XboxLogo.png</file>
     </qresource>
 </RCC>
