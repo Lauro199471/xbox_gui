@@ -30,9 +30,7 @@ MainWindow::MainWindow(QNode *node, QWidget *parent) :
 
     ReadSettings();
     setWindowIcon(QIcon(":/images/Xbox.png"));
-    this->setWindowTitle("Xbox GUI");
-
-    setWindowTitle(QApplication::translate("MainWindowDesign", qnode->nodeName().c_str(), 0, QApplication::UnicodeUTF8));
+    setWindowTitle("Xbox GUI - Lauro Cabral");
 
     /*********************
     ** Logging
