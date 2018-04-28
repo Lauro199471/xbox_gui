@@ -1,19 +1,7 @@
-/**
- * @file /eros_qtalker/src/qnode.cpp
- *
- * @brief Ros communication central!
- *
- * @date February 2011
- **/
-
-/*****************************************************************************
-** Includes
-*****************************************************************************/
-
 #include <ros/ros.h>
 #include <ros/network.h>
 #include <string>
-#include "qnode.hpp"
+#include "../include/xbox_gui/qnode.hpp"
 #include <std_msgs/String.h>
 #include <sstream>
 
@@ -66,4 +54,3 @@ bool QNode::on_init(const std::string &master_url, const std::string &host_url) 
   start();
   return true;
 }
-

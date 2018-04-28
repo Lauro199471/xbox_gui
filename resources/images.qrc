@@ -3,5 +3,13 @@
         <file>images/icon.png</file>
         <file>images/Xbox.png</file>
         <file>images/XboxLogo.png</file>
+        <file>images/aOFF.png</file>
+        <file>images/aON.png</file>
+        <file>images/BOFF.png</file>
+        <file>images/BOn.png</file>
+        <file>images/XOff.png</file>
+        <file>images/XOn.png</file>
+        <file>images/YOFf.png</file>
+        <file>images/YOn.png</file>
     </qresource>
 </RCC>

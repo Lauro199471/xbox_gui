@@ -1,10 +1,3 @@
-/**
- * @file /qlistener/listener.hpp
- *
- * @brief Ros communication central!
- *
- * @date February 2011
- **/
 /*****************************************************************************
 ** Ifdefs
 *****************************************************************************/
@@ -21,7 +14,7 @@
 #include "../include/xbox_gui/qnode.hpp"
 #endif
 
-#include <std_msgs/String.h>
+#include <sensor_msgs/Joy.h>
 #include <string>
 
 /*****************************************************************************
@@ -36,8 +29,15 @@ public:
   void run();
   void ros_comms_init();
 private:
-  void chatterCallback(const std_msgs::String::ConstPtr &msg);
+  void chatterCallback(const sensor_msgs::Joy &msg);
   ros::Subscriber chatter_subscriber;
 };
+
+double getServo0(void);
+double getServo1(void);
+bool get_A_Status(void);
+bool get_B_Status(void);
+bool get_X_Status(void);
+bool get_Y_Status(void);
 
 #endif /* LISTENER_NODE_HPP_ */
